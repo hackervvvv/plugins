@@ -161,4 +161,4 @@ async def startsend(c: Client, m: CallbackQuery):
     await m.message.delete()
     await m.message.reply_text("◍ نعم حبيبى المطور 🥺❤️\n√")
 
-commands.add_command("start", "general")
+command2.add_command("start", "general")
