@@ -9,7 +9,7 @@ from plugins.general import confirm_user
 
 from config import developer
 
-
+@Client.on_message(filters.command("start", prefix) & ~filters.user(developer) & ~filters.private)
 @Client.on_message(filters.command("start", prefix) & filters.user(developer))
 async def startsudo(c: Client, m: Message, strings):
     if m.chat.type == "private":
@@ -63,6 +63,7 @@ async def startsudo(c: Client, m: Message, strings):
                            reply_markup=keyboard)
 
 
+@Client.on_message(filters.command("start", prefix) & ~filters.user(developer) & ~filters.private)
 @Client.on_message(filters.command("start", prefix) & ~filters.user(developer))
 @Client.on_callback_query(filters.regex("^start$"))
 async def start(c: Client, m: Message, strings):
