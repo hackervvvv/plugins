@@ -160,5 +160,3 @@ async def commandsss(c: Client, m: CallbackQuery):
 async def startsend(c: Client, m: CallbackQuery):
     await m.message.delete()
     await m.message.reply_text("◍ نعم حبيبى المطور 🥺❤️\n√")
-
-command2.add_command("start", "general")
